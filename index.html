@@ -90,20 +90,20 @@
            (lastColumn - 1 <= column && column <= lastColumn + 1 );
   }
 
+  var bg_colors = [ "#1abc9c",  "#f39c12", "#9b59b6", "#34495e", "#95a5a6", "#e74c3c", "#95a5a6", "#c0392b", "#8e44ad", "#193441", "#91AA9D", "#F0C600", "#8EA106", "#484A47", "#687D77", "#353129", "#174C4F", "#FF9666", "#FFE184", "#00436E", "#21F53A", "#BC00FF", "#FF8AC3", "#502700", "#146E5B", "#f39c12"];
+
   var mousedown = false;
   var currentlySelected = [];
   var stage;
   var rect_size = 50;
   var rect_corner = 5;
-  var min_new_letter = 0 ;
+  var min_new_letter = 0;
   var threshold = 10 ;
   var times_occured = 0 ;
 
   var matrix = [];
 
 
-  var bg_colors = [ "#1abc9c",  "#f39c12", "#9b59b6", "#34495e", "#95a5a6", "#e74c3c", "#95a5a6", "#c0392b"];
-  // var text_colors = [ "black", "black","black"];
 
   function init() {
       stage = new createjs.Stage("demoCanvas");
