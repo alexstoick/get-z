@@ -23,5 +23,8 @@
     "jshint-loader": "^0.8.3",
     "node-libs-browser": "^0.5.3",
     "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
   }
 }
