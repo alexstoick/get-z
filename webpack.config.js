@@ -4,15 +4,22 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-    loaders: [
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['es2015']
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'jshint-loader'
       }
-    }
+    ],
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015']
+        }
+      }
     ]
   },
   resolve: {
