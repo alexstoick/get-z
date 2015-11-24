@@ -1,0 +1,27 @@
+{
+  "name": "get-z-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexstoick/get-z.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/alexstoick/get-z/issues"
+  },
+  "homepage": "https://github.com/alexstoick/get-z#readme",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "jshint": "^2.8.0",
+    "jshint-loader": "^0.8.3",
+    "node-libs-browser": "^0.5.3",
+    "webpack": "^1.12.9"
+  }
+}
