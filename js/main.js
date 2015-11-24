@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import 'createjs';
 var mousedown = false;
 var currentlySelected = [];
 var stage;
@@ -8,7 +10,7 @@ var threshold = 10 ;
 var times_occured = 0 ;
 var matrix = [];
 
-import $ from './jquery';
+
 
 function generateLetterId() {
   return min_new_letter + Math.floor(Math.random()*5.0) + 65;
@@ -91,10 +93,10 @@ function createContainerEvents(container) {
         rect.border = !border.visible;
         stage.update();
         if ( border.visible ) {
-          addToSelection(rect)
+          addToSelection(rect);
         }
         else {
-          removeFromSelection(rect)
+          removeFromSelection(rect);
         }
 
       }
@@ -106,7 +108,7 @@ function addToSelection(rect) {
 }
 
 function removeFromSelection(rect) {
-  currentlySelected.slice(rect)
+  currentlySelected.slice(rect);
 }
 
 function sameLetter(rect) {
@@ -150,7 +152,7 @@ function init() {
       lastRect.graphics._fill.style = bg_colors[letter_id];
       lastRect.borderObject.visible = false;
       lastRect.border = true;
-      currentlySelected.splice(currentlySelected.length-1, 1)
+      currentlySelected.splice(currentlySelected.length-1, 1);
         for(let i = 0 ; i < currentlySelected.length; ++i) {
           let rect = currentlySelected[i];
           let removedRow = rect.row;
@@ -165,7 +167,7 @@ function init() {
             stage.update();
           }
           //generate new box for this column
-          rect = createBox(0, removedColumn, start_x + 55*removedColumn, 15)
+          rect = createBox(0, removedColumn, start_x + 55*removedColumn, 15);
             matrix[0][removedColumn] = rect;
           stage.update();
         }
@@ -179,7 +181,7 @@ function init() {
       stage.update();
     }
     currentlySelected = [];
-  })
+  });
   for( let row = 0 ; row < 6 ; ++ row ) {
     matrix[row] = [];
     for ( let i = 0 ; i < 8; ++ i ) {
@@ -192,4 +194,4 @@ function init() {
 
 $(document).ready(function(){
   init();
-})
+});
